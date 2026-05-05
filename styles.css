@@ -1,0 +1,16 @@
+/* css by Sarita Carey
+/ * Color Palette
+peach
+linen
+light yellow
+deep purple
+*/
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0e5; /* light yellow */
+    color: #4b0082; /* deep purple */
+    margin: 0;
+    padding: 0;
+}
