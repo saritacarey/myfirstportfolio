@@ -4,14 +4,35 @@
 /* ==========================================
    Mobile-First Base Styles (Phones)
    ========================================== */
-body {                
-    font-family: 'Arial', sans-serif;                
-    background-color: #fff0e5; /* peach linen */                
-    color: #4b0082; /* deep purple (indigo) */                
-    margin: 0;                
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0e5; /* peach linen */
+    color: #4b0082; /* deep purple (indigo) */
+    margin: 0;
     padding: 15px; /* Added padding for mobile screen edges */
     font-size: 16px; /* Good base size for mobile */
     line-height: 1.5;
+}
+
+/* --- Added Layout & Image Styles --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content */
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 15px; /* Space between photos */
+    justify-content: center; /* Centers photos if they don't fill the row */
+}
+
+.photo-grid img {
+    /* Mobile: Photos take up almost full width */
+    width: calc(100% - 0px);
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Crops image to fit if height is set */
+    border-radius: 8px; /* Optional: smooth corners */
 }
 
 /* ==========================================
@@ -22,6 +43,11 @@ body {
         padding: 30px; /* More padding on larger screens */
         font-size: 18px;
     }
+
+    .photo-grid img {
+        /* Tablet: 2 photos per row (minus gap) */
+        width: calc(50% - 15px);
+    }
 }
 
 /* ==========================================
@@ -30,5 +56,10 @@ body {
 @media (min-width: 1024px) {
     body {
         padding: 50px; /* Even more space on desktop */
+    }
+
+    .photo-grid img {
+        /* Desktop: 3 photos per row (minus gaps) */
+        width: calc(33.333% - 15px);
     }
 }
